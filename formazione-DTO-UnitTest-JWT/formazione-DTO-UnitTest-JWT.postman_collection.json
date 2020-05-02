@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "bbd80a9c-5659-4ace-b38b-1e67bac5e705",
+		"name": "formazione-DTO-UnitTest-JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/public",
+			"item": [
+				{
+					"name": "/authentication",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"lovrenco\",\n\t\"password\" : \"pa$$w0rd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/public/authentication",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"public",
+								"authentication"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "/users",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZFVzZXIiOjEyLCJzdWIiOiJzdWJqZWN0LTEyIiwiaXNzIjoiaXNzdWVyLTEyIiwiZXhwIjoxNTg2MTExMDAwLCJpYXQiOjE1ODYxMTA5NDAsInVzZXJuYW1lIjoibG92cmVuY28ifQ.c56uQRlyiU4LHVjskAA9CmjexZlNPX1oEzzggZmbVU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e060fd19-c4db-4228-bc27-833cf9a19c35",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "952f7e0b-600b-4689-93b0-bf5a312d2b8f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "92ff90ad-6b7c-4b5a-9cca-2b2024036d67",
+			"key": "base_url",
+			"value": "http://localhost:8090",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
